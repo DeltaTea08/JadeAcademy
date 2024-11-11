@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DeltaTea_">
+    <title>Jade Academy</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: rgb(252, 252, 252);
+            color: white;
+            overflow: hidden;
+            scroll-behavior: smooth;
+        }
+        .card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: min(300px, 90%);
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+        }
+        #menu{
+            position: fixed;
+            top: calc(50vh - 200px)
+        }
+        .btn{
+            width: 100px;
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.316);
+            border: none;
+            color: white;
+        }
+        #btn1{
+            border-top-right-radius: 100px;
+            border-top-left-radius: 100px;
+        }
+        #btn2{
+            border-bottom-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+        }
+        @media(max-width: 600px) { 
+            .img { 
+              display: none; 
+            }
+          }
+    </style>
+</head>
+<body>
+    <div id="1" class="container" style="background-color: orange;">
+        <div class="card">
+            <h1 style="inset: 0; margin:auto; color: rgb(119, 77, 0);" align="center">Welcome!</h1>
+        </div>
+    </div>
+    <div id="2" class="container" style="background-color: rgb(54, 125, 155);">
+        <div class="card">
+            <h1 style="inset: 0; margin:auto; color: rgb(29, 67, 84);" align="center">Meet the winglet!</h1>
+        </div>
+    </div>
+    <div id="3" class="container" style="background-color: rgb(254, 210, 67); color: rgb(108, 89, 28);">
+        <div class="card">
+            <h1 style="inset: 0; margin:auto;" align="center">DeltaTea_</h1>
+        </div>
+    </div>
+    <div id="4" class="container" style="background-color: rgb(135, 227, 255); color: rgb(81, 135, 151);">
+        <div class="card">
+            <h1 style="inset: 0; margin:auto;" align="center">xy</h1>
+        </div>
+    </div>
+    <div id="5" class="container" style="background-color: rgb(70, 60, 251); color: rgb(42, 36, 160);">
+        <div class="card">
+            <h1 style="inset: 0; margin:auto;" align="center">xy</h1>
+        </div>
+    </div>
+    <div id="6" class="container" style="background-color: rgb(250, 23, 11); color: rgb(140, 13, 6);">
+        <div class="card">
+            <h1 style="inset: 0; margin:auto;" align="center">xy</h1>
+        </div>
+    </div>
+    <div id="7" class="container" style="background-color: rgb(254, 210, 67); color: rgb(108, 89, 28);">
+        <div class="card">
+            <h1 style="inset: 0; margin:auto;" align="center">xy</h1>
+        </div>
+    </div>
+    <div id="menu">
+        <button id="btn1" class="btn" onclick="downfunction()">🢁</button><br>
+        <button id="btn2" class="btn" onclick="upfunction()">🢃</button>
+    </div>
+</body>
+<script>
+    var x = 1;
+    function upfunction(){
+        if(x < 7){
+            x += 1;
+            document.getElementById(x).scrollIntoView({ block: 'start',  behavior: 'smooth' });
+        }
+    }
+    function downfunction(){
+        if(x > 1){
+            x -= 1;
+            document.getElementById(x).scrollIntoView({ block: 'start',  behavior: 'smooth' });
+        }
+    }
+</script>
+</html>
