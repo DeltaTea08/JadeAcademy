@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EuropeWinglet</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: rgb(14, 14, 14);
+            color: white;
+        }
+        h1{
+            line-height: 60px;
+            text-align: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            transition: color 1s;
+        }
+        h1::after{
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background-color: none;
+            width: 100%;
+            height: 5px;
+            transition: background-color 500ms;
+        }
+        h1:hover::after{
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background-color: white;
+            width: 100%;
+            height: 5px;
+        }
+        #dot1{
+            height: 80vh;
+            width: 80vh;
+            background-color: rgb(8, 8, 8);
+            border-radius: 50%;
+            position: fixed;
+            top: 50%;
+            left: 0px;
+            translate: -50% -50%;
+        }
+        #dot2{
+            height: 40vw;
+            width: 40vw;
+            background-color: rgb(8, 8, 8);
+            border-radius: 50%;
+            position: fixed;
+            top: 100%;
+            left: 50%;
+            translate: -50% -50%;
+        }
+        #dot3{
+            height: 60vw;
+            width: 60vw;
+            background-color: rgb(8, 8, 8);
+            border-radius: 50%;
+            position: fixed;
+            top: 0px;
+            left: 100%;
+            translate: -50% -50%;
+        }
+        a{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="dot1"></div>
+    <div id="dot2"></div>
+    <div id="dot3"></div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_AwKRCwWnwWmcaGwvl9h7MmJTT0VzkjbNQprut3-D6SJcRQ/viewform?usp=sf_link"><h1>Share your characters!</h1></a>
+</body>
+</html>
